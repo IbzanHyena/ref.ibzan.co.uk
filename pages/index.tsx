@@ -94,6 +94,30 @@ function refs(): JSX.Element {
     )
 }
 
+function gotchas(): JSX.Element {
+    function item(brief: string, long: string) {
+        return <li><b>{brief}</b> &mdash; {long}</li>
+    }
+
+    return (
+        <span>
+            <h3>Some gotchas</h3>
+            <p>
+                These are some common things to look out for in Ibzan's design.
+            </p>
+            <ul>
+                {
+                    [
+                        ["Ears", "Ibzan's ears are round, not pointy."],
+                        ["Muzzle", "Ibzan's muzzle is relatively flat. It slopes downwards from his forehead quickly and then continues almost flat until his nose."],
+                        ["Spots", "Ibzan's spots are mostly circular in shape, not too long in any particular direction"],
+                        ["Fur", "Most of Ibzan's fur is relatively short. It shouldn't be visibly hanging (unless wet), save for the longer bits of fur he has around his neck and back."],
+                    ].map(a => item(a[0], a[1]))}
+            </ul>
+        </span>
+    )
+}
+
 export default function Home(): JSX.Element {
     return (
         <>
@@ -138,6 +162,7 @@ export default function Home(): JSX.Element {
                     Ibzan wears a variety of clothing, but his most common outfit is a khaki shirt worn loosely, a black leather jacket, and some blue jeans.
                     Well-worn, but not ripped.
                 </p>
+                {gotchas()}
                 {refs()}
                 {colourTable()}
             </main>
