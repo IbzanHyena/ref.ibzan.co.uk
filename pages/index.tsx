@@ -48,12 +48,16 @@ const colourTable = (): JSX.Element => (
                     </tr>
                     </thead>
                     <tbody>
-                    {colourRow("Brown 1", "90654a")}
-                    {colourRow("Brown 2", "886c58")}
-                    {colourRow("Tan", "c5a68d")}
-                    {colourRow("Pastel blue", "5c5baa")}
-                    {colourRow("Dark blue", "2f1e82")}
-                    {colourRow("Dark brown", "302222")}
+                    {
+                        [
+                            ["Brown 1", "90654a"],
+                            ["Brown 2", "886c58"],
+                            ["Tan", "c5a68d"],
+                            ["Pastel blue", "5c5baa"],
+                            ["Dark blue", "2f1e82"],
+                            ["Dark brown", "302222"],
+                        ].map(a => colourRow(a[0], a[1]))
+                    }
                     </tbody>
                 </table>
             </div>
