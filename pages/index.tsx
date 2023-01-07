@@ -55,10 +55,10 @@ function colourTable(): JSX.Element {
                     <tbody>
                     {colourRow("Brown 1", "90654a")}
                     {colourRow("Brown 2", "886c58")}
+                    {colourRow("Tan", "c5a68d")}
+                    {colourRow("Pastel blue", "5c5baa")}
                     {colourRow("Dark blue", "2f1e82")}
                     {colourRow("Dark brown", "302222")}
-                    {colourRow("Pastel blue", "5c5baa")}
-                    {colourRow("Tan", "c5a68d")}
                     </tbody>
                 </table>
             </div>
