@@ -116,14 +116,9 @@ const gotchas = (): JSX.Element => {
     )
 };
 
-export default (): JSX.Element => (
-    <>
-        <Head>
-            <title>Ibzan Reference</title>
-        </Head>
-        <main>
-            <h1 className={"centre-text"}>Ibzan Reference</h1>
-            <p className={"centre-text"}><i>he/him, ish</i></p>
+const intro = (): JSX.Element => {
+    return (
+        <span>
             <p>
                 Ibzan is a spotted hyena (<i>Crocuta crocuta</i>).
                 Most of his fur is of a natural colour, save for some blue highlights &mdash; notably, his hair, paw
@@ -165,6 +160,19 @@ export default (): JSX.Element => (
                 leather jacket, and some blue jeans.
                 Well-worn, but not ripped.
             </p>
+        </span>
+    )
+}
+
+export default (): JSX.Element => (
+    <>
+        <Head>
+            <title>Ibzan Reference</title>
+        </Head>
+        <main>
+            <h1 className={"centre-text"}>Ibzan Reference</h1>
+            <p className={"centre-text"}><i>he/him, ish</i></p>
+            {intro()}
             {gotchas()}
             {refs()}
             {colourTable()}
