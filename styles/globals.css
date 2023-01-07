@@ -60,7 +60,7 @@ body {
     font-family: monospace;
     border: 1px solid gray;
     border-radius: 3px;
-    padding: 0.1em 0.1em;
+    padding: 0.1em 1em;
   }
 
   /* Tab stuff */
