@@ -171,7 +171,7 @@ export default (): JSX.Element => (
         </Head>
         <main>
             <h1 className={"centre-text"}>Ibzan Reference</h1>
-            <p className={"centre-text"}><i>he/him, ish</i></p>
+            <p className={"centre-text"}><i>he/they?</i></p>
             {intro()}
             {gotchas()}
             {refs()}
