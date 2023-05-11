@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
 const luma = (hex: string): number => {
-    hex = hex.substring(1); // string leading #
+    hex = hex.substring(1); // strip leading #
     const rgb = parseInt(hex, 16);
     const r = (rgb >> 16) & 0xff;
     const g = (rgb >> 8) & 0xff;
