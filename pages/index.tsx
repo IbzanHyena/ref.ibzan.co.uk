@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import {unescape} from "querystring";
 
 const luma = (hex: string): number => {
     hex = hex.substring(1); // strip leading #
@@ -23,23 +24,23 @@ const intro = (): JSX.Element => {
             </p>
             <p>
                 Physically, Ibzan is typically of regular proportions.
-                Around 180cm or 5'11" tall, and weighing about 80kg or 12.5 stones.
+                Around 180cm or 5&prime;11&Prime; tall, and weighing about 80kg or 12.5 stones.
                 His musculature is generally either reasonably well-toned or androgynous; Ibzan is rarely extremely
                 muscled or chubby.
                 His legs are almost always digitigrade, rather than plantigrade.
             </p>
             <p>
-                Ibzan's muzzle is dark brown, transitioning to the tan fur all over his belly and inner legs by the
+                Ibzan&rsquo;s muzzle is dark brown, transitioning to the tan fur all over his belly and inner legs by the
                 time it reaches his face proper.
-                The muzzle's shape is also fairly boxy &mdash; it's not especially pointy or rounded.
+                The muzzle&rsquo;s shape is also fairly boxy &mdash; it&rsquo;s not especially pointy or rounded.
                 <br/>
                 His ears, however, are quite round, and his eyes are brown.
             </p>
             <p>
-                Ibzan's hair is usually scruffy and unkempt.
+                Ibzan&rsquo;s hair is usually scruffy and unkempt.
                 Occasionally, he combs it nicely.
                 When growing long, his hair develops slight waves to it.
-                His hair continues along the back of his neck, leading to a wider "V"-shaped patch of blue fur on
+                His hair continues along the back of his neck, leading to a wider &ldquo;V&rdquo;-shaped patch of blue fur on
                 his back.
             </p>
             <p>
@@ -48,7 +49,7 @@ const intro = (): JSX.Element => {
                 Notably, the spots only appear on his darker fur &mdash; not on his belly.
             </p>
             <p>
-                The blue highlight on Ibzan's tail can be depicted as either a dipstick style or as travelling all
+                The blue highlight on Ibzan&rsquo;s tail can be depicted as either a dipstick style or as travelling all
                 the way along the underside to the base of the tail.
                 A dipstick tail is a safe bet, though.
             </p>
@@ -70,15 +71,15 @@ const gotchas = (): JSX.Element => {
         <span>
             <h3>Some gotchas</h3>
             <p>
-                These are some common things to look out for in Ibzan's design.
+                These are some common things to look out for in Ibzan&rsquo;s design.
             </p>
             <ul>
                 {
                     [
-                        ["Ears", "Ibzan's ears are round, not pointy."],
-                        ["Muzzle", "Ibzan's muzzle is relatively flat. It slopes downwards from his forehead quickly and then continues almost flat until his nose."],
-                        ["Spots", "Ibzan's spots are mostly circular in shape, not too long in any particular direction"],
-                        ["Fur", "Most of Ibzan's fur is relatively short. It shouldn't be visibly hanging (unless wet), save for the longer bits of fur he has around his neck and back."],
+                        ["Ears", "Ibzan’s ears are round, not pointy."],
+                        ["Muzzle", "Ibzan’s muzzle is relatively flat, both on top and at the front. It slopes downwards from his forehead quickly and then continues almost flat until his nose."],
+                        ["Spots", "Ibzan’s spots are mostly circular in shape, not too long in any particular direction"],
+                        ["Fur", "Most of Ibzan’s fur is relatively short. It shouldn&rsquo;t be visibly hanging (unless wet), save for the longer bits of fur he has around his neck and back."],
                     ].map(a => item(a[0], a[1]))}
             </ul>
         </span>
@@ -91,10 +92,10 @@ const refs = (): JSX.Element => (
             <div className="reftabs">
                 <input type="radio" name="tabset" id="flat-ref" aria-controls="flat-ref" className={"print-hide"}
                        defaultChecked/>
-                <label htmlFor="flat-ref" className={"print-hide"}>Flat</label>
+                <label htmlFor="flat-ref" className={"print-hide"}><span>Flat</span></label>
                 <input type="radio" name="tabset" id="painted-ref" aria-controls="painted-ref"
                        className={"print-hide"}/>
-                <label htmlFor="painted-ref" className={"print-hide"}>Painted</label>
+                <label htmlFor="painted-ref" className={"print-hide"}><span>Painted</span></label>
 
                 <div className="reftab-panels">
                     <section id="flat-ref" className="reftab-panel">

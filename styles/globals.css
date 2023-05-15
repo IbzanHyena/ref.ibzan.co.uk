@@ -9,7 +9,9 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Heliotrope 4",sans-serif;
+  font-size: 18px;
+  padding: 0 5% 20%;
 }
 
 @media screen {
@@ -32,28 +34,14 @@ body {
     transform: translate(-50%, 0);
   }
 
-  @media (prefers-color-scheme: dark) {
-    body {
-      background-color: var(--ibzan-dark-brown);
-      color: #ffffff;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-      text-decoration: underline;
-      text-decoration-color: var(--ibzan-pastel-blue);
-    }
+  body {
+    background-color: var(--ibzan-dark-brown);
+    color: #ffffff;
   }
 
-  @media (prefers-color-scheme: light) {
-    body {
-      background-color: var(--ibzan-tan);
-      color: #000000;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-      text-decoration: underline;
-      text-decoration-color: var(--ibzan-dark-blue);
-    }
+  h1, h2, h3, h4, h5, h6 {
+    text-decoration: underline;
+    text-decoration-color: var(--ibzan-pastel-blue);
   }
 
   .colour {
@@ -99,26 +87,28 @@ body {
     height: 0.25em;
   }
 
-  @media (prefers-color-scheme: light) {
-    .reftabs > label::after {
-      background: var(--ibzan-dark-brown);
-    }
+  .reftabs > label::after {
+    background: var(--ibzan-tan);
   }
 
-  @media (prefers-color-scheme: dark) {
-    .reftabs > label::after {
-      background: var(--ibzan-tan);
-    }
+  .reftabs > label > span, a {
+    background-color: var(--ibzan-tan);
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    border-radius: 0.2em;
+    text-decoration: unset;
+    color: black;
+    font-style: normal;
+    font-family: heliotrope_4_caps, "Heliotrope 4", sans-serif;
+    font-variant-caps: small-caps;
   }
 
-  .reftabs > label:hover,
-  .reftabs > input:focus + label {
-    color: var(--ibzan-pastel-blue);
-    border-color: var(--ref-edge);
+  .reftabs > label:hover > span,
+  a:hover {
+    background-color: var(--ibzan-pastel-blue);
   }
 
   .reftabs > label:hover::after,
-  .reftabs > input:focus + label::after,
   .reftabs > input:checked + label::after {
     background: var(--ibzan-pastel-blue);
   }
