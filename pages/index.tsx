@@ -79,7 +79,7 @@ const gotchas = (): JSX.Element => {
                         ["Ears", "Ibzan’s ears are round, not pointy."],
                         ["Muzzle", "Ibzan’s muzzle is relatively flat, both on top and at the front. It slopes downwards from his forehead quickly and then continues almost flat until his nose."],
                         ["Spots", "Ibzan’s spots are mostly circular in shape, not too long in any particular direction"],
-                        ["Fur", "Most of Ibzan’s fur is relatively short. It shouldn&rsquo;t be visibly hanging (unless wet), save for the longer bits of fur he has around his neck and back."],
+                        ["Fur", "Most of Ibzan’s fur is relatively short. It shouldn’t be visibly hanging (unless wet), save for the longer bits of fur he has around his neck and back."],
                     ].map(a => item(a[0], a[1]))}
             </ul>
         </span>
