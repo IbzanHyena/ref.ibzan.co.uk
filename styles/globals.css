@@ -45,7 +45,7 @@ body {
   }
 
   .colour {
-    font-family: monospace;
+    font-family: "Triplicate A",monospace;
     border: 1px solid gray;
     border-radius: 3px;
     padding: 0.1em 1em;
