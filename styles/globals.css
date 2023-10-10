@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: "Heliotrope 4",sans-serif;
+  font-family: "Heliotrope 4", sans-serif;
   font-size: 18px;
   padding: 0 5% 20%;
 }
@@ -45,7 +45,7 @@ body {
   }
 
   .colour {
-    font-family: "Triplicate A",monospace;
+    font-family: "Triplicate A", monospace;
     border: 1px solid rgb(128, 128, 128);
     border-radius: 3px;
     padding: 0.1em 1em;
