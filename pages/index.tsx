@@ -88,7 +88,7 @@ const gotchas = (): JSX.Element => {
 
 const refs = (): JSX.Element => (
     <span>
-            <h2 className={"centre-text"}>Reference Sheet</h2>
+            <h2 className={"centre-text"}>Reference sheet</h2>
             <div className="reftabs">
                 <input type="radio" name="tabset" id="flat-ref" aria-controls="flat-ref" className={"print-hide"}
                        defaultChecked/>
