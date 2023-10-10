@@ -13,6 +13,7 @@ body {
   font-size: 18px;
   line-height: 1.3;
   padding: 0 5% 20%;
+  text-rendering: optimizeLegibility;
   font-feature-settings: "calt", "kern", "liga", "onum", "zero";
 }
 
