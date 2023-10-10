@@ -169,6 +169,7 @@ export default (): JSX.Element => (
     <>
         <Head>
             <title>Ibzan Reference</title>
+            <link rel={"stylesheet"} href={"https://stuff.ibzan.co.uk/fonts.css"}/>
         </Head>
         <main>
             <h1 className={"centre-text"}>Ibzan Reference</h1>
