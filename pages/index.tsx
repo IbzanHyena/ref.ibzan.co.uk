@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import {unescape} from "querystring";
 
 const luma = (hex: string): number => {
     hex = hex.substring(1); // strip leading #
