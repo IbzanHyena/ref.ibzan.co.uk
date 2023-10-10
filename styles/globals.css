@@ -137,6 +137,10 @@ body {
     display: none;
   }
 
+  .colour {
+    font-feature-settings: "onum" off, "tnum";
+  }
+
   .colour-rect {
     width: 1em;
     height: 1em;
