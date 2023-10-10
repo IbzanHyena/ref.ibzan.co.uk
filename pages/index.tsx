@@ -24,7 +24,7 @@ const intro = (): JSX.Element => {
             </p>
             <p>
                 Physically, Ibzan is typically of regular proportions.
-                Around 180cm or 5&prime;11&Prime; tall, and weighing about 80kg or 12.5 stones.
+                Around 180 cm or 5&prime;11&Prime; tall, and weighing about 80 kg or 12.5 stones.
                 His musculature is generally either reasonably well-toned or androgynous; Ibzan is rarely extremely
                 muscled or chubby.
                 His legs are almost always digitigrade, rather than plantigrade.
