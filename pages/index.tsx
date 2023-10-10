@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from "next/image";
 
 const luma = (hex: string): number => {
     hex = hex.substring(1); // strip leading #
@@ -98,12 +99,12 @@ const refs = (): JSX.Element => (
 
                 <div className="reftab-panels">
                     <section id="flat-ref" className="reftab-panel">
-                        <img
+                        <Image
                             src={"https://imagedelivery.net/nLmn9dzvNkBD5T8WEc0EPw/9616a5b3-af0e-461e-e183-db4770624d00/full"}
                             alt={"A flat reference sheet for Ibzan"} className={"ref"}/>
                     </section>
                     <section id="painted-ref" className="reftab-panel">
-                        <img
+                        <Image
                             src={"https://imagedelivery.net/nLmn9dzvNkBD5T8WEc0EPw/7d8c2a08-c3a3-4c33-da79-fef398cff800/full"}
                             alt={"A painted reference sheet for Ibzan"} className={"ref"}/>
                     </section>
