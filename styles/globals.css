@@ -46,7 +46,7 @@ body {
 
   .colour {
     font-family: "Triplicate A",monospace;
-    border: 1px solid gray;
+    border: 1px solid rgb(128, 128, 128);
     border-radius: 3px;
     padding: 0.1em 1em;
   }
