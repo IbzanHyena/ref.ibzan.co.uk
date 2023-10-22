@@ -14,7 +14,7 @@ const link = (href: string, contents: string | JSX.Element): JSX.Element => (
     <span><a href={href}>{contents}</a><span className={"print-only"}> ({href})</span></span>
 );
 
-const intro = (): JSX.Element => {
+const Intro = (): JSX.Element => {
     return (
         <span>
             <p>
@@ -62,7 +62,7 @@ const intro = (): JSX.Element => {
     )
 };
 
-const gotchas = (): JSX.Element => {
+const Gotchas = (): JSX.Element => {
     function item(brief: string, long: string) {
         return <li key={brief}><b>{brief}</b> &mdash; {long}</li>
     }
@@ -86,7 +86,7 @@ const gotchas = (): JSX.Element => {
     )
 };
 
-const refs = (): JSX.Element => (
+const Refs = (): JSX.Element => (
     <span>
             <h2 className={"centre-text"}>Reference sheet</h2>
             <div className="reftabs">
@@ -122,7 +122,7 @@ const refs = (): JSX.Element => (
         </span>
 );
 
-const colour = (hex: string): JSX.Element => {
+const Colour = ({hex}: {hex: string }): JSX.Element => {
     hex = "#" + hex
     const textColour = luma(hex) > 80 ? "#000000" : "#ffffff";
     return (
@@ -138,14 +138,14 @@ const colour = (hex: string): JSX.Element => {
     )
 };
 
-const colourRow = (name: string, hex: string): JSX.Element => (
+const ColourRow = ({name, hex}: {name: string, hex: string}): JSX.Element => (
     <tr key={hex}>
         <td>{name}</td>
-        <td>{colour(hex)}</td>
+        <td><Colour hex={hex}/></td>
     </tr>
 );
 
-const colourTable = (): JSX.Element => (
+const ColourTable = (): JSX.Element => (
     <span>
             <h2 className={"centre-text"}>Colours</h2>
             <div className={"centre-margin"}>
@@ -165,7 +165,7 @@ const colourTable = (): JSX.Element => (
                             ["Pastel blue", "5c5baa"],
                             ["Dark blue", "2f1e82"],
                             ["Dark brown", "302222"],
-                        ].map(a => colourRow(a[0], a[1]))
+                        ].map(a => <ColourRow name={a[0]} hex={a[1]}/>)
                     }
                     </tbody>
                 </table>
@@ -181,10 +181,10 @@ export default (): JSX.Element => (
         <main>
             <h1 className={"centre-text"}>Ibzan Reference</h1>
             <p className={"centre-text"}><i>he/they?</i></p>
-            {intro()}
-            {gotchas()}
-            {refs()}
-            {colourTable()}
+            <Intro/>
+            <Gotchas/>
+            <Refs/>
+            <ColourTable/>
         </main>
     </>
 )
