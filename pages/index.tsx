@@ -101,12 +101,20 @@ const refs = (): JSX.Element => (
                     <section id="flat-ref" className="reftab-panel">
                         <Image
                             src={"https://imagedelivery.net/nLmn9dzvNkBD5T8WEc0EPw/9616a5b3-af0e-461e-e183-db4770624d00/full"}
-                            alt={"A flat reference sheet for Ibzan"} className={"ref"}/>
+                            alt={"A flat reference sheet for Ibzan"}
+                            className={"ref"}
+                            width={0}
+                            height={0}
+                        />
                     </section>
                     <section id="painted-ref" className="reftab-panel">
                         <Image
                             src={"https://imagedelivery.net/nLmn9dzvNkBD5T8WEc0EPw/7d8c2a08-c3a3-4c33-da79-fef398cff800/full"}
-                            alt={"A painted reference sheet for Ibzan"} className={"ref"}/>
+                            alt={"A painted reference sheet for Ibzan"}
+                            className={"ref"}
+                            width={0}
+                            height={0}
+                        />
                     </section>
                 </div>
             </div>
