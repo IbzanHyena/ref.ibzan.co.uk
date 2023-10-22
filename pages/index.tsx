@@ -64,7 +64,7 @@ const intro = (): JSX.Element => {
 
 const gotchas = (): JSX.Element => {
     function item(brief: string, long: string) {
-        return <li><b>{brief}</b> &mdash; {long}</li>
+        return <li key={brief}><b>{brief}</b> &mdash; {long}</li>
     }
 
     return (
@@ -131,7 +131,7 @@ const colour = (hex: string): JSX.Element => {
 };
 
 const colourRow = (name: string, hex: string): JSX.Element => (
-    <tr>
+    <tr key={hex}>
         <td>{name}</td>
         <td>{colour(hex)}</td>
     </tr>
