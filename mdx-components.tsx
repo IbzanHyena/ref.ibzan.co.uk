@@ -1,5 +1,4 @@
 import type { MDXComponents } from 'mdx/types'
-import Image from "next/image";
 import React from "react";
 
 const luma = (hex: string): number => {
