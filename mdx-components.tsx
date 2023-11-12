@@ -50,7 +50,15 @@ const ColourTable = ({elements}: {elements: [string, string][] }): JSX.Element =
 )
 
 const Link = ({href, children}: {href: string, children: React.ReactNode}): JSX.Element => (
-    <span><a href={href}>{children}</a><span className={"print-only"}> ({href})</span></span>
+    <span>
+        <a
+            className={href.startsWith('/') ? "internal-link" : "external-link"}
+            href={href}
+        >
+            {children}
+        </a>
+        <span className={"print-only"}> ({href})</span>
+    </span>
 )
 
 const ArtistCredit = ({artist, site}: {artist: string, site: string}): JSX.Element => (
