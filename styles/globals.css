@@ -68,6 +68,9 @@ body {
     font-feature-settings: "onum" off, "tnum";
   }
 
+  ::-moz-selection { background: var(--ibzan-pastel-blue); }
+  ::selection { background: var(--ibzan-pastel-blue); }
+
   /* Tab stuff */
   .reftabs {
     max-width: 90vw;
@@ -122,7 +125,10 @@ body {
     text-decoration: unset;
     color: black;
     font-style: normal;
-    font-family: heliotrope_4_caps, "Heliotrope 4", sans-serif;
+  }
+
+  a.external-link {
+    font-family: heliotrope_4_caps, heliotrope_4, sans-serif;
     font-variant-caps: small-caps;
   }
 
