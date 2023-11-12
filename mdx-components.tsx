@@ -54,6 +54,10 @@ const Link = ({href, children}: {href: string, children: React.ReactNode}): JSX.
     <span><a href={href}>{children}</a><span className={"print-only"}> ({href})</span></span>
 )
 
+const ArtistCredit = ({artist, site}: {artist: string, site: string}): JSX.Element => (
+    <p className={"centre-text"}><i>Art by <Link href={site}>{artist}</Link>.</i></p>
+)
+
 const Refs = (): JSX.Element => (
     <span>
         <div className="reftabs">
@@ -83,8 +87,16 @@ const Refs = (): JSX.Element => (
                 </section>
             </div>
         </div>
-        <p className={"centre-text"}><i>Art by <Link href={"https://runtyink.com"}>Chibity</Link>.</i></p>
+        <ArtistCredit artist={"Chibity"} site={"https://runtyink.com"}/>
     </span>
+)
+
+const SingleRefImage = ({src, artist, artistSite}: {src: string, artist: string, artistSite: string}): JSX.Element => (
+    <div className={"no-break"}>
+        <h2>Reference sheet</h2>
+        <img src={src} className={"ref"}/>
+        <ArtistCredit artist={artist} site={artistSite}/>
+    </div>
 )
 
 // This file is required to use MDX in `app` directory.
@@ -95,7 +107,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         ColourTable,
         Link,
         Refs,
-        Image,
+        SingleRefImage,
         ...components,
     }
 }

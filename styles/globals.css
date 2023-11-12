@@ -163,4 +163,10 @@ body {
   margin-left: auto;
   margin-right: auto;
   display: block;
+  break-inside: avoid;
+}
+
+.no-break {
+  display: block;
+  break-inside: avoid;
 }
