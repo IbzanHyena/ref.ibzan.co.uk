@@ -9,12 +9,15 @@
 }
 
 body {
-  font-family: "Heliotrope 4", sans-serif;
+  font-family: heliotrope_4, sans-serif;
   font-size: 18px;
   line-height: 1.3;
   padding: 0 5% 20%;
   text-rendering: optimizeLegibility;
   font-feature-settings: "calt", "kern", "liga", "onum", "zero";
+  max-width: 100ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media only screen and (max-width: 768px) {
@@ -58,7 +61,7 @@ body {
   }
 
   .colour {
-    font-family: "Triplicate A", monospace;
+    font-family: triplicate_a, monospace;
     border: 1px solid rgb(128, 128, 128);
     border-radius: 3px;
     padding: 0.1em 1em;
@@ -66,9 +69,15 @@ body {
   }
 
   /* Tab stuff */
+  .reftabs {
+    max-width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
   .reftabs > input[type="radio"] {
-    position: absolute;
-    left: -200vw;
+    display: none;
   }
 
   /* hide nonactive tabs */
@@ -77,7 +86,7 @@ body {
   }
 
   /* bit hacky */
-  .reftabs > input:first-child:checked ~ .reftab-panels > .reftab-panel:first-child,
+  .reftabs > input:nth-child(1):checked ~ .reftab-panels > .reftab-panel:nth-child(1),
   .reftabs > input:nth-child(3):checked ~ .reftab-panels > .reftab-panel:nth-child(2) {
     display: block;
   }
@@ -126,10 +135,6 @@ body {
   .reftabs > input:checked + label::after {
     background: var(--ibzan-pastel-blue);
   }
-
-  .reftab-panel {
-    border-top: 1px solid var(--ref-edge);
-  }
 }
 
 @media print {
@@ -144,6 +149,7 @@ body {
   .colour-rect {
     width: 1em;
     height: 1em;
+    float: right;
   }
 
   a {
@@ -153,5 +159,8 @@ body {
 
 .ref {
   max-width: 100%;
-  max-height: 15%;
+  max-height: 90vh;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
