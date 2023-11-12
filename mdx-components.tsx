@@ -49,13 +49,15 @@ const ColourTable = ({elements}: {elements: [string, string][] }): JSX.Element =
     </table>
 )
 
+const spacesToNonBreaking = (s: string): string => s.replace(' ', '\xa0');
+
 const Link = ({href, children}: {href: string, children: React.ReactNode}): JSX.Element => (
     <span>
         <a
             className={href.startsWith('/') ? "internal-link" : "external-link"}
             href={href}
         >
-            {children}
+            {typeof children === "string" ? spacesToNonBreaking(children) : children}
         </a>
         <span className={"print-only"}> ({href})</span>
     </span>
