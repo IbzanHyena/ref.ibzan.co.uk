@@ -68,9 +68,6 @@ body {
     font-feature-settings: "onum" off, "tnum";
   }
 
-  ::-moz-selection { background: var(--ibzan-pastel-blue); }
-  ::selection { background: var(--ibzan-pastel-blue); }
-
   /* Tab stuff */
   .reftabs {
     max-width: 90vw;
