@@ -10,7 +10,7 @@ const luma = (hex: string): number => {
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
 };
 
-function Colour({hex}: {hex: string}): JSX.Element {
+function Colour({hex}: {hex: string}): React.JSX.Element {
     hex = "#" + hex
     const textColour = luma(hex) > 80 ? "#000000" : "#ffffff";
     return (
@@ -26,14 +26,14 @@ function Colour({hex}: {hex: string}): JSX.Element {
     )
 }
 
-const ColourRow = ({name, hex}: {name: string, hex: string}): JSX.Element => (
+const ColourRow = ({name, hex}: {name: string, hex: string}): React.JSX.Element => (
     <tr>
         <td>{name}</td>
         <td><Colour hex={hex}/></td>
     </tr>
 )
 
-const ColourTable = ({elements}: {elements: [string, string][] }): JSX.Element =>  (
+const ColourTable = ({elements}: {elements: [string, string][] }): React.JSX.Element =>  (
     <table className={"colourTable"}>
         <thead>
         <tr>
@@ -51,7 +51,7 @@ const ColourTable = ({elements}: {elements: [string, string][] }): JSX.Element =
 
 const spacesToNonBreaking = (s: string): string => s.replace(' ', '\xa0');
 
-const Link = ({href, children}: {href: string, children: React.ReactNode}): JSX.Element => (
+const Link = ({href, children}: {href: string, children: React.ReactNode}): React.JSX.Element => (
     <span>
         <a
             className={href.startsWith('/') ? "internal-link" : "external-link"}
@@ -63,11 +63,11 @@ const Link = ({href, children}: {href: string, children: React.ReactNode}): JSX.
     </span>
 )
 
-const ArtistCredit = ({artist, site}: {artist: string, site: string}): JSX.Element => (
+const ArtistCredit = ({artist, site}: {artist: string, site: string}): React.JSX.Element => (
     <p className={"centre-text"}><i>Art by <Link href={site}>{artist}</Link>.</i></p>
 )
 
-const Refs = (): JSX.Element => (
+const Refs = (): React.JSX.Element => (
     <span>
         <div className="reftabs">
             <input type="radio" name="tabset" id="flat-ref" aria-controls="flat-ref" className={"print-hide"}
@@ -100,7 +100,7 @@ const Refs = (): JSX.Element => (
     </span>
 )
 
-const SingleRefImage = ({src, artist, artistSite}: {src: string, artist: string, artistSite: string}): JSX.Element => (
+const SingleRefImage = ({src, artist, artistSite}: {src: string, artist: string, artistSite: string}): React.JSX.Element => (
     <div className={"no-break"}>
         <h2>Reference sheet</h2>
         <img src={src} className={"ref"}/>
