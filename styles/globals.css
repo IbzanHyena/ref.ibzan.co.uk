@@ -20,12 +20,6 @@ body {
   margin-right: auto;
 }
 
-@media only screen and (max-width: 768px) {
-  body {
-    padding: 0 5% 2em;
-  }
-}
-
 @media screen {
   p, h1, h2, h3, h4, h5, h6, ul {
     padding: 0 20%;
@@ -137,6 +131,16 @@ body {
   .reftabs > label:hover::after,
   .reftabs > input:checked + label::after {
     background: var(--ibzan-pastel-blue);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 0 18px 2em;
+  }
+
+  p, h1, h2, h3, h4, h5, h6, ul {
+    padding: 0;
   }
 }
 
